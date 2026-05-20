@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung – Mathifant</title>
+  <style>
+    :root {
+      --bg: #F0F4FF;
+      --card: #ffffff;
+      --primary: #3B3B98;
+      --accent: #6C63FF;
+      --text: #3B3B98;
+      --muted: #8888AA;
+      --border: #E0E4F0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header .emoji {
+      font-size: 56px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .lang-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .lang-tab {
+      padding: 8px 20px;
+      border-radius: 20px;
+      border: 2px solid var(--border);
+      background: var(--card);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .lang-tab.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .section {
+      display: none;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .section.active { display: block; }
+
+    .card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 16px rgba(60, 60, 150, 0.08);
+    }
+
+    .card h2 {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555577;
+      margin-bottom: 10px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .card ul {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .card ul li {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555577;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    .card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(108, 99, 255, 0.1);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="emoji">🐘</span>
+  <h1>Mathifant</h1>
+  <p>Datenschutzerklärung · Privacy Policy · Politique de confidentialité</p>
+</header>
+
+<div class="lang-tabs">
+  <button class="lang-tab active" onclick="switchLang('de', this)">🇩🇪 Deutsch</button>
+  <button class="lang-tab" onclick="switchLang('en', this)">🇬🇧 English</button>
+  <button class="lang-tab" onclick="switchLang('fr', this)">🇫🇷 Français</button>
+</div>
+
+<!-- DEUTSCH -->
+<div class="section active" id="de">
+  <div class="card">
+    <div class="badge">Stand: Mai 2026</div>
+    <h2>Verantwortlicher</h2>
+    <p>Daniel Schmidt, DS Works<br>Strasbourg, Frankreich<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Welche Daten wir speichern</h2>
+    <p>Mathifant speichert ausschließlich lokal auf deinem Gerät:</p>
+    <ul>
+      <li>Spielerprofile (Name, Avatar, Altersgruppe, Lieblingsfarbe)</li>
+      <li>Spielstatistiken (Punkte, Genauigkeit, gespielte Sessions)</li>
+      <li>App-Einstellungen (Sprache)</li>
+      <li>Kaufstatus (ob Mathifant Pro erworben wurde)</li>
+    </ul>
+    <p>Es werden keine personenbezogenen Daten an externe Server übertragen. Es werden keine Daten mit Dritten geteilt.</p>
+  </div>
+
+  <div class="card">
+    <h2>In-App-Käufe</h2>
+    <p>Mathifant bietet einen einmaligen In-App-Kauf ("Mathifant Pro") an. Die Zahlungsabwicklung erfolgt ausschließlich über den Google Play Store. DS Works hat keinen Zugriff auf Zahlungsdaten.</p>
+  </div>
+
+  <div class="card">
+    <h2>Kinder</h2>
+    <p>Mathifant richtet sich an Kinder im Vorschul- und Grundschulalter. Die App sammelt keine personenbezogenen Daten von Kindern. Es gibt keine Werbung, kein Tracking und keine Verbindung zu sozialen Netzwerken.</p>
+  </div>
+
+  <div class="card">
+    <h2>Berechtigungen</h2>
+    <p>Die App benötigt keine besonderen Geräteberechtigungen — kein Zugriff auf Kamera, Mikrofon, Standort oder Kontakte.</p>
+  </div>
+
+  <div class="card">
+    <h2>Änderungen</h2>
+    <p>Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren. Die jeweils aktuelle Version ist unter dieser URL abrufbar.</p>
+  </div>
+</div>
+
+<!-- ENGLISH -->
+<div class="section" id="en">
+  <div class="card">
+    <div class="badge">Last updated: May 2026</div>
+    <h2>Controller</h2>
+    <p>Daniel Schmidt, DS Works<br>Strasbourg, France<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Data we store</h2>
+    <p>Mathifant stores data exclusively on your device:</p>
+    <ul>
+      <li>Player profiles (name, avatar, age group, favourite colour)</li>
+      <li>Game statistics (score, accuracy, sessions played)</li>
+      <li>App settings (language)</li>
+      <li>Purchase status (whether Mathifant Pro has been purchased)</li>
+    </ul>
+    <p>No personal data is transmitted to external servers. No data is shared with third parties.</p>
+  </div>
+
+  <div class="card">
+    <h2>In-App Purchases</h2>
+    <p>Mathifant offers a one-time in-app purchase ("Mathifant Pro"). Payment processing is handled exclusively by the Google Play Store. DS Works has no access to payment data.</p>
+  </div>
+
+  <div class="card">
+    <h2>Children</h2>
+    <p>Mathifant is designed for preschool and primary school children. The app does not collect personal data from children. There is no advertising, no tracking, and no connection to social networks.</p>
+  </div>
+
+  <div class="card">
+    <h2>Permissions</h2>
+    <p>The app requires no special device permissions — no access to camera, microphone, location, or contacts.</p>
+  </div>
+
+  <div class="card">
+    <h2>Changes</h2>
+    <p>We reserve the right to update this privacy policy. The current version is always available at this URL.</p>
+  </div>
+</div>
+
+<!-- FRANÇAIS -->
+<div class="section" id="fr">
+  <div class="card">
+    <div class="badge">Dernière mise à jour : mai 2026</div>
+    <h2>Responsable du traitement</h2>
+    <p>Daniel Schmidt, DS Works<br>Strasbourg, France<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Données que nous stockons</h2>
+    <p>Mathifant stocke les données exclusivement sur votre appareil :</p>
+    <ul>
+      <li>Profils de joueurs (nom, avatar, groupe d'âge, couleur préférée)</li>
+      <li>Statistiques de jeu (score, précision, sessions jouées)</li>
+      <li>Paramètres de l'application (langue)</li>
+      <li>Statut d'achat (si Mathifant Pro a été acheté)</li>
+    </ul>
+    <p>Aucune donnée personnelle n'est transmise à des serveurs externes. Aucune donnée n'est partagée avec des tiers.</p>
+  </div>
+
+  <div class="card">
+    <h2>Achats intégrés</h2>
+    <p>Mathifant propose un achat intégré unique ("Mathifant Pro"). Le traitement des paiements est effectué exclusivement par le Google Play Store. DS Works n'a pas accès aux données de paiement.</p>
+  </div>
+
+  <div class="card">
+    <h2>Enfants</h2>
+    <p>Mathifant est conçu pour les enfants d'âge préscolaire et primaire. L'application ne collecte pas de données personnelles auprès des enfants. Il n'y a pas de publicité, pas de suivi et pas de connexion aux réseaux sociaux.</p>
+  </div>
+
+  <div class="card">
+    <h2>Autorisations</h2>
+    <p>L'application ne nécessite aucune autorisation spéciale — pas d'accès à la caméra, au microphone, à la localisation ou aux contacts.</p>
+  </div>
+
+  <div class="card">
+    <h2>Modifications</h2>
+    <p>Nous nous réservons le droit de mettre à jour cette politique de confidentialité. La version actuelle est toujours disponible à cette URL.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 DS Works · <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+</footer>
+
+<script>
+  function switchLang(lang, btn) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.lang-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
