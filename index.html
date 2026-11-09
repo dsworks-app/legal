@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datenschutzerklärung – Mathifant</title>
+  <title>Privacy Policy – Mathifant</title>
+  <meta name="description" content="Privacy Policy for the Mathifant app by DS Works.">
   <style>
     :root {
       --bg: #F0F4FF;
@@ -11,6 +12,7 @@
       --primary: #3B3B98;
       --accent: #6C63FF;
       --text: #3B3B98;
+      --body: #555577;
       --muted: #8888AA;
       --border: #E0E4F0;
     }
@@ -18,16 +20,16 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Nunito', 'Segoe UI', sans-serif;
+      font-family: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
-      padding: 40px 20px 80px;
+      padding: 40px 16px 80px;
     }
 
     header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     header .emoji {
@@ -44,29 +46,38 @@
     }
 
     header p {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--muted);
       margin-top: 6px;
     }
 
     .lang-tabs {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin-bottom: 32px;
+      gap: 8px;
+      max-width: 720px;
+      margin: 0 auto 32px;
     }
 
     .lang-tab {
-      padding: 8px 20px;
+      padding: 6px 14px;
       border-radius: 20px;
       border: 2px solid var(--border);
       background: var(--card);
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.2s;
       font-family: inherit;
+    }
+
+    .lang-tab:hover { border-color: var(--accent); color: var(--accent); }
+
+    .lang-tab:focus-visible {
+      outline: 3px solid rgba(108, 99, 255, 0.4);
+      outline-offset: 2px;
     }
 
     .lang-tab.active {
@@ -89,6 +100,8 @@
       padding: 28px;
       margin-bottom: 16px;
       box-shadow: 0 4px 16px rgba(60, 60, 150, 0.08);
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     .card h2 {
@@ -103,21 +116,23 @@
     .card p {
       font-size: 15px;
       line-height: 1.7;
-      color: #555577;
+      color: var(--body);
       margin-bottom: 10px;
     }
 
     .card p:last-child { margin-bottom: 0; }
 
+    .card a { color: var(--accent); }
+
     .card ul {
       list-style: none;
-      margin-top: 8px;
+      margin: 8px 0 10px;
     }
 
     .card ul li {
       font-size: 15px;
       line-height: 1.7;
-      color: #555577;
+      color: var(--body);
       padding-left: 20px;
       position: relative;
       margin-bottom: 4px;
@@ -153,24 +168,162 @@
       color: var(--accent);
       text-decoration: none;
     }
+
+    @media (max-width: 480px) {
+      .card { padding: 22px 20px; }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <span class="emoji">🐘</span>
+  <span class="emoji" aria-hidden="true">🐘</span>
   <h1>Mathifant</h1>
-  <p>Datenschutzerklärung · Privacy Policy · Politique de confidentialité</p>
+  <p id="subtitle">Privacy Policy</p>
 </header>
 
-<div class="lang-tabs">
-  <button class="lang-tab active" onclick="switchLang('de', this)">🇩🇪 Deutsch</button>
-  <button class="lang-tab" onclick="switchLang('en', this)">🇬🇧 English</button>
-  <button class="lang-tab" onclick="switchLang('fr', this)">🇫🇷 Français</button>
-</div>
+<nav class="lang-tabs" aria-label="Language">
+  <button type="button" class="lang-tab active" data-lang="en-us" lang="en-US" aria-pressed="true">English (US)</button>
+  <button type="button" class="lang-tab" data-lang="en-gb" lang="en-GB" aria-pressed="false">English (UK)</button>
+  <button type="button" class="lang-tab" data-lang="de" lang="de" aria-pressed="false">Deutsch</button>
+  <button type="button" class="lang-tab" data-lang="fr" lang="fr" aria-pressed="false">Français</button>
+  <button type="button" class="lang-tab" data-lang="es" lang="es" aria-pressed="false">Español</button>
+  <button type="button" class="lang-tab" data-lang="it" lang="it" aria-pressed="false">Italiano</button>
+  <button type="button" class="lang-tab" data-lang="nl" lang="nl" aria-pressed="false">Nederlands</button>
+  <button type="button" class="lang-tab" data-lang="pl" lang="pl" aria-pressed="false">Polski</button>
+  <button type="button" class="lang-tab" data-lang="hu" lang="hu" aria-pressed="false">Magyar</button>
+  <button type="button" class="lang-tab" data-lang="ru" lang="ru" aria-pressed="false">Русский</button>
+  <button type="button" class="lang-tab" data-lang="uk" lang="uk" aria-pressed="false">Українська</button>
+  <button type="button" class="lang-tab" data-lang="pt-br" lang="pt-BR" aria-pressed="false">Português (BR)</button>
+  <button type="button" class="lang-tab" data-lang="pt-pt" lang="pt-PT" aria-pressed="false">Português (PT)</button>
+  <button type="button" class="lang-tab" data-lang="ko" lang="ko" aria-pressed="false">한국어</button>
+  <button type="button" class="lang-tab" data-lang="cs" lang="cs" aria-pressed="false">Čeština</button>
+  <button type="button" class="lang-tab" data-lang="tr" lang="tr" aria-pressed="false">Türkçe</button>
+  <button type="button" class="lang-tab" data-lang="vi" lang="vi" aria-pressed="false">Tiếng Việt</button>
+</nav>
+
+<main>
+
+<!-- ENGLISH (US) – default and prevailing version -->
+<section class="section active" data-lang="en-us" lang="en-US" data-title="Privacy Policy">
+  <div class="card">
+    <div class="badge">Last updated: November 2026</div>
+    <h2>Controller</h2>
+    <p>Daniel Schmidt, DS Works<br>Strasbourg, France<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Data we store</h2>
+    <p>Mathifant stores data exclusively on your device:</p>
+    <ul>
+      <li>Player profiles (name, avatar, age group, favorite color)</li>
+      <li>Game statistics (score, accuracy, sessions played)</li>
+      <li>App settings (language)</li>
+      <li>Purchase status (whether Mathifant Pro is unlocked)</li>
+    </ul>
+    <p>No personal data is sent to DS Works or to any other server, and no data is shared with third parties. The only exception is the purchase check by Google or Apple described under “In-App Purchases.”</p>
+  </div>
+
+  <div class="card">
+    <h2>In-App Purchases</h2>
+    <p>Mathifant offers a one-time in-app purchase (“Mathifant Pro”). Payment processing is handled exclusively by the Google Play Store or the Apple App Store. DS Works has no access to payment data.</p>
+    <p>The purchase is linked to your Google or Apple account, not to the device. To check whether Mathifant Pro is unlocked, the app asks Google Play or the App Store. This lets you restore Mathifant Pro after reinstalling the app or on a new device, as long as you use the same account. Google's or Apple's privacy policy applies to this check.</p>
+  </div>
+
+  <div class="card">
+    <h2>Children</h2>
+    <p>Mathifant is designed for preschool and elementary school children. The app does not collect personal data from children. There is no advertising, no tracking, and no connection to social networks.</p>
+  </div>
+
+  <div class="card">
+    <h2>Permissions</h2>
+    <p>The app requires no special device permissions — no access to camera, microphone, location, or contacts. Only when you import a backup may your device ask for access to your files.</p>
+  </div>
+
+  <div class="card">
+    <h2>Backup and restore</h2>
+    <p>You can export your progress as a file, pass it on through your device's share menu and import it again. This only happens at your request. The app itself transmits nothing. You decide where the file goes (for example email or cloud storage); the terms of that service apply there.</p>
+    <p>If backup via Google or iCloud is active on your device, the operating system may include the app data. This is controlled by your device, not by the app.</p>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>The contact button in the app opens your email app. The message is sent through your email provider.</p>
+  </div>
+
+  <div class="card">
+    <h2>Changes</h2>
+    <p>We reserve the right to update this privacy policy. The current version is always available at this URL.</p>
+  </div>
+
+  <div class="card">
+    <h2>Language versions</h2>
+    <p>This privacy policy is available in several languages. If the language versions differ, this English (US) version prevails.</p>
+  </div>
+</section>
+
+<!-- ENGLISH (UK) -->
+<section class="section" data-lang="en-gb" lang="en-GB" data-title="Privacy Policy">
+  <div class="card">
+    <div class="badge">Last updated: November 2026</div>
+    <h2>Controller</h2>
+    <p>Daniel Schmidt, DS Works<br>Strasbourg, France<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Data we store</h2>
+    <p>Mathifant stores data exclusively on your device:</p>
+    <ul>
+      <li>Player profiles (name, avatar, age group, favourite colour)</li>
+      <li>Game statistics (score, accuracy, sessions played)</li>
+      <li>App settings (language)</li>
+      <li>Purchase status (whether Mathifant Pro is unlocked)</li>
+    </ul>
+    <p>No personal data is sent to DS Works or to any other server, and no data is shared with third parties. The only exception is the purchase check by Google or Apple described under ‘In-App Purchases’.</p>
+  </div>
+
+  <div class="card">
+    <h2>In-App Purchases</h2>
+    <p>Mathifant offers a one-time in-app purchase (‘Mathifant Pro’). Payment processing is handled exclusively by the Google Play Store or the Apple App Store. DS Works has no access to payment data.</p>
+    <p>The purchase is linked to your Google or Apple account, not to the device. To check whether Mathifant Pro is unlocked, the app asks Google Play or the App Store. This lets you restore Mathifant Pro after reinstalling the app or on a new device, as long as you use the same account. Google's or Apple's privacy policy applies to this check.</p>
+  </div>
+
+  <div class="card">
+    <h2>Children</h2>
+    <p>Mathifant is designed for preschool and primary school children. The app does not collect personal data from children. There is no advertising, no tracking and no connection to social networks.</p>
+  </div>
+
+  <div class="card">
+    <h2>Permissions</h2>
+    <p>The app requires no special device permissions — no access to camera, microphone, location or contacts. Only when you import a backup may your device ask for access to your files.</p>
+  </div>
+
+  <div class="card">
+    <h2>Backup and restore</h2>
+    <p>You can export your progress as a file, pass it on through your device's share menu and import it again. This only happens at your request. The app itself transmits nothing. You decide where the file goes (for example email or cloud storage); the terms of that service apply there.</p>
+    <p>If backup via Google or iCloud is active on your device, the operating system may include the app data. This is controlled by your device, not by the app.</p>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>The contact button in the app opens your email app. The message is sent through your email provider.</p>
+  </div>
+
+  <div class="card">
+    <h2>Changes</h2>
+    <p>We reserve the right to update this privacy policy. The current version is always available at this URL.</p>
+  </div>
+
+  <div class="card">
+    <h2>Language versions</h2>
+    <p>This privacy policy is available in several languages. If the language versions differ, the <a href="#en-us">English (US) version</a> prevails.</p>
+  </div>
+</section>
 
 <!-- DEUTSCH -->
-<div class="section active" id="de">
+<section class="section" data-lang="de" lang="de" data-title="Datenschutzerklärung">
   <div class="card">
     <div class="badge">Stand: November 2026</div>
     <h2>Verantwortlicher</h2>
@@ -185,14 +338,15 @@
       <li>Spielerprofile (Name, Avatar, Altersgruppe, Lieblingsfarbe)</li>
       <li>Spielstatistiken (Punkte, Genauigkeit, gespielte Sessions)</li>
       <li>App-Einstellungen (Sprache)</li>
-      <li>Kaufstatus (ob Mathifant Pro erworben wurde)</li>
+      <li>Kaufstatus (ob Mathifant Pro freigeschaltet ist)</li>
     </ul>
-    <p>Es werden keine personenbezogenen Daten an externe Server übertragen. Es werden keine Daten mit Dritten geteilt.</p>
+    <p>Es werden keine personenbezogenen Daten an DS Works oder andere Server übertragen und keine Daten mit Dritten geteilt. Einzige Ausnahme ist die Kaufprüfung durch Google bzw. Apple, siehe „In-App-Käufe“.</p>
   </div>
 
   <div class="card">
     <h2>In-App-Käufe</h2>
-    <p>Mathifant bietet einen einmaligen In-App-Kauf ("Mathifant Pro") an. Die Zahlungsabwicklung erfolgt ausschließlich über den Google Play Store bzw. den Apple App Store. DS Works hat keinen Zugriff auf Zahlungsdaten.</p>
+    <p>Mathifant bietet einen einmaligen In-App-Kauf („Mathifant Pro“) an. Die Zahlungsabwicklung erfolgt ausschließlich über den Google Play Store bzw. den Apple App Store. DS Works hat keinen Zugriff auf Zahlungsdaten.</p>
+    <p>Der Kauf ist an dein Google- bzw. Apple-Konto gebunden, nicht an das Gerät. Ob Mathifant Pro freigeschaltet ist, fragt die App bei Google Play bzw. im App Store ab. So kannst du Mathifant Pro nach einer Neuinstallation oder auf einem neuen Gerät wiederherstellen, solange du dasselbe Konto verwendest. Für diese Abfrage gilt die Datenschutzerklärung von Google bzw. Apple.</p>
   </div>
 
   <div class="card">
@@ -220,63 +374,15 @@
     <h2>Änderungen</h2>
     <p>Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren. Die jeweils aktuelle Version ist unter dieser URL abrufbar.</p>
   </div>
-</div>
-
-<!-- ENGLISH -->
-<div class="section" id="en">
-  <div class="card">
-    <div class="badge">Last updated: November 2026</div>
-    <h2>Controller</h2>
-    <p>Daniel Schmidt, DS Works<br>Strasbourg, France<br>
-    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
-  </div>
 
   <div class="card">
-    <h2>Data we store</h2>
-    <p>Mathifant stores data exclusively on your device:</p>
-    <ul>
-      <li>Player profiles (name, avatar, age group, favourite colour)</li>
-      <li>Game statistics (score, accuracy, sessions played)</li>
-      <li>App settings (language)</li>
-      <li>Purchase status (whether Mathifant Pro has been purchased)</li>
-    </ul>
-    <p>No personal data is transmitted to external servers. No data is shared with third parties.</p>
+    <h2>Sprachfassungen</h2>
+    <p>Diese Datenschutzerklärung ist in mehreren Sprachen verfügbar. Bei Abweichungen zwischen den Sprachfassungen ist die <a href="#en-us">englische Fassung (US)</a> maßgeblich.</p>
   </div>
-
-  <div class="card">
-    <h2>In-App Purchases</h2>
-    <p>Mathifant offers a one-time in-app purchase ("Mathifant Pro"). Payment processing is handled exclusively by the Google Play Store or the Apple App Store. DS Works has no access to payment data.</p>
-  </div>
-
-  <div class="card">
-    <h2>Children</h2>
-    <p>Mathifant is designed for preschool and primary school children. The app does not collect personal data from children. There is no advertising, no tracking, and no connection to social networks.</p>
-  </div>
-
-  <div class="card">
-    <h2>Permissions</h2>
-    <p>The app requires no special device permissions — no access to camera, microphone, location, or contacts. Only when you import a backup may your device ask for access to your files.</p>
-  </div>
-
-  <div class="card">
-    <h2>Backup and restore</h2>
-    <p>You can export your progress as a file, pass it on through your device's share menu and import it again. This only happens at your request. The app itself transmits nothing. You decide where the file goes (for example email or cloud storage); the terms of that service apply there.</p>
-    <p>If backup via Google or iCloud is active on your device, the operating system may include the app data. This is controlled by your device, not by the app.</p>
-  </div>
-
-  <div class="card">
-    <h2>Contact</h2>
-    <p>The contact button in the app opens your email app. The message is sent through your email provider.</p>
-  </div>
-
-  <div class="card">
-    <h2>Changes</h2>
-    <p>We reserve the right to update this privacy policy. The current version is always available at this URL.</p>
-  </div>
-</div>
+</section>
 
 <!-- FRANÇAIS -->
-<div class="section" id="fr">
+<section class="section" data-lang="fr" lang="fr" data-title="Politique de confidentialité">
   <div class="card">
     <div class="badge">Dernière mise à jour : novembre 2026</div>
     <h2>Responsable du traitement</h2>
@@ -291,14 +397,15 @@
       <li>Profils de joueurs (nom, avatar, groupe d'âge, couleur préférée)</li>
       <li>Statistiques de jeu (score, précision, sessions jouées)</li>
       <li>Paramètres de l'application (langue)</li>
-      <li>Statut d'achat (si Mathifant Pro a été acheté)</li>
+      <li>Statut d'achat (si Mathifant Pro est débloqué)</li>
     </ul>
-    <p>Aucune donnée personnelle n'est transmise à des serveurs externes. Aucune donnée n'est partagée avec des tiers.</p>
+    <p>Aucune donnée personnelle n'est transmise à DS Works ni à aucun autre serveur, et aucune donnée n'est partagée avec des tiers. Seule exception : la vérification de l'achat par Google ou Apple, décrite sous « Achats intégrés ».</p>
   </div>
 
   <div class="card">
     <h2>Achats intégrés</h2>
-    <p>Mathifant propose un achat intégré unique ("Mathifant Pro"). Le traitement des paiements est effectué exclusivement par le Google Play Store ou l'App Store d'Apple. DS Works n'a pas accès aux données de paiement.</p>
+    <p>Mathifant propose un achat intégré unique (« Mathifant Pro »). Le traitement des paiements est effectué exclusivement par le Google Play Store ou l'App Store d'Apple. DS Works n'a pas accès aux données de paiement.</p>
+    <p>L'achat est lié à votre compte Google ou Apple, et non à l'appareil. Pour savoir si Mathifant Pro est débloqué, l'application interroge Google Play ou l'App Store. Vous pouvez ainsi restaurer Mathifant Pro après une réinstallation ou sur un nouvel appareil, à condition d'utiliser le même compte. Cette vérification est régie par la politique de confidentialité de Google ou d'Apple.</p>
   </div>
 
   <div class="card">
@@ -326,19 +433,862 @@
     <h2>Modifications</h2>
     <p>Nous nous réservons le droit de mettre à jour cette politique de confidentialité. La version actuelle est toujours disponible à cette URL.</p>
   </div>
-</div>
+
+  <div class="card">
+    <h2>Versions linguistiques</h2>
+    <p>Cette politique de confidentialité est disponible en plusieurs langues. En cas de divergence entre les versions linguistiques, la <a href="#en-us">version anglaise (US)</a> prévaut.</p>
+  </div>
+</section>
+
+<!-- ESPAÑOL -->
+<section class="section" data-lang="es" lang="es" data-title="Política de privacidad">
+  <div class="card">
+    <div class="badge">Última actualización: noviembre de 2026</div>
+    <h2>Responsable del tratamiento</h2>
+    <p>Daniel Schmidt, DS Works<br>Estrasburgo, Francia<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Datos que almacenamos</h2>
+    <p>Mathifant almacena los datos exclusivamente en tu dispositivo:</p>
+    <ul>
+      <li>Perfiles de jugador (nombre, avatar, grupo de edad, color favorito)</li>
+      <li>Estadísticas de juego (puntuación, precisión, sesiones jugadas)</li>
+      <li>Ajustes de la aplicación (idioma)</li>
+      <li>Estado de compra (si Mathifant Pro está desbloqueado)</li>
+    </ul>
+    <p>No se envían datos personales a DS Works ni a ningún otro servidor, y no se comparten datos con terceros. La única excepción es la verificación de la compra por parte de Google o Apple, descrita en «Compras dentro de la aplicación».</p>
+  </div>
+
+  <div class="card">
+    <h2>Compras dentro de la aplicación</h2>
+    <p>Mathifant ofrece una única compra dentro de la aplicación («Mathifant Pro»). El pago se gestiona exclusivamente a través de Google Play Store o Apple App Store. DS Works no tiene acceso a los datos de pago.</p>
+    <p>La compra está vinculada a tu cuenta de Google o Apple, no al dispositivo. Para comprobar si Mathifant Pro está desbloqueado, la aplicación consulta Google Play o el App Store. Así puedes restaurar Mathifant Pro tras reinstalar la aplicación o en un dispositivo nuevo, siempre que uses la misma cuenta. A esta consulta se le aplica la política de privacidad de Google o Apple.</p>
+  </div>
+
+  <div class="card">
+    <h2>Niños</h2>
+    <p>Mathifant está pensada para niños en edad preescolar y de primaria. La aplicación no recopila datos personales de los niños. No hay publicidad, ni seguimiento, ni conexión con redes sociales.</p>
+  </div>
+
+  <div class="card">
+    <h2>Permisos</h2>
+    <p>La aplicación no necesita permisos especiales del dispositivo: no accede a la cámara, el micrófono, la ubicación ni los contactos. Solo cuando importas una copia de seguridad, tu dispositivo puede pedirte acceso a tus archivos.</p>
+  </div>
+
+  <div class="card">
+    <h2>Copia de seguridad y restauración</h2>
+    <p>Puedes exportar tu progreso como archivo, compartirlo mediante el menú de compartir de tu dispositivo e importarlo de nuevo. Esto solo ocurre cuando tú lo decides. La aplicación en sí no transmite nada. Tú decides adónde va el archivo (por ejemplo, correo electrónico o almacenamiento en la nube); allí se aplican las condiciones del servicio correspondiente.</p>
+    <p>Si la copia de seguridad de Google o iCloud está activada en tu dispositivo, el sistema operativo puede incluir los datos de la aplicación. Esto lo controla tu dispositivo, no la aplicación.</p>
+  </div>
+
+  <div class="card">
+    <h2>Contacto</h2>
+    <p>El botón de contacto de la aplicación abre tu aplicación de correo. El mensaje se envía a través de tu proveedor de correo electrónico.</p>
+  </div>
+
+  <div class="card">
+    <h2>Cambios</h2>
+    <p>Nos reservamos el derecho de actualizar esta política de privacidad. La versión vigente está siempre disponible en esta URL.</p>
+  </div>
+
+  <div class="card">
+    <h2>Versiones lingüísticas</h2>
+    <p>Esta política de privacidad está disponible en varios idiomas. En caso de discrepancia entre las versiones lingüísticas, prevalece la <a href="#en-us">versión en inglés (EE. UU.)</a>.</p>
+  </div>
+</section>
+
+<!-- ITALIANO -->
+<section class="section" data-lang="it" lang="it" data-title="Informativa sulla privacy">
+  <div class="card">
+    <div class="badge">Ultimo aggiornamento: novembre 2026</div>
+    <h2>Titolare del trattamento</h2>
+    <p>Daniel Schmidt, DS Works<br>Strasburgo, Francia<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Dati che memorizziamo</h2>
+    <p>Mathifant memorizza i dati esclusivamente sul tuo dispositivo:</p>
+    <ul>
+      <li>Profili dei giocatori (nome, avatar, fascia d'età, colore preferito)</li>
+      <li>Statistiche di gioco (punteggio, precisione, sessioni giocate)</li>
+      <li>Impostazioni dell'app (lingua)</li>
+      <li>Stato dell'acquisto (se Mathifant Pro è sbloccato)</li>
+    </ul>
+    <p>Nessun dato personale viene inviato a DS Works o ad altri server e nessun dato viene condiviso con terzi. L'unica eccezione è la verifica dell'acquisto da parte di Google o Apple, descritta in «Acquisti in-app».</p>
+  </div>
+
+  <div class="card">
+    <h2>Acquisti in-app</h2>
+    <p>Mathifant offre un unico acquisto in-app («Mathifant Pro»). Il pagamento viene gestito esclusivamente tramite Google Play Store o Apple App Store. DS Works non ha accesso ai dati di pagamento.</p>
+    <p>L'acquisto è collegato al tuo account Google o Apple, non al dispositivo. Per verificare se Mathifant Pro è sbloccato, l'app interroga Google Play o l'App Store. In questo modo puoi ripristinare Mathifant Pro dopo una reinstallazione o su un nuovo dispositivo, purché tu utilizzi lo stesso account. A questa verifica si applica l'informativa sulla privacy di Google o Apple.</p>
+  </div>
+
+  <div class="card">
+    <h2>Bambini</h2>
+    <p>Mathifant è pensata per bambini in età prescolare e della scuola primaria. L'app non raccoglie dati personali dei bambini. Non ci sono pubblicità, tracciamento né collegamenti ai social network.</p>
+  </div>
+
+  <div class="card">
+    <h2>Autorizzazioni</h2>
+    <p>L'app non richiede autorizzazioni speciali del dispositivo: nessun accesso a fotocamera, microfono, posizione o contatti. Solo quando importi un backup il tuo dispositivo potrebbe chiederti l'accesso ai tuoi file.</p>
+  </div>
+
+  <div class="card">
+    <h2>Backup e ripristino</h2>
+    <p>Puoi esportare i tuoi progressi in un file, condividerlo tramite il menu di condivisione del dispositivo e importarlo di nuovo. Questo avviene solo su tua richiesta. L'app di per sé non trasmette nulla. Sei tu a decidere dove va il file (ad esempio e-mail o archiviazione cloud); lì si applicano le condizioni del rispettivo servizio.</p>
+    <p>Se sul tuo dispositivo è attivo il backup tramite Google o iCloud, il sistema operativo può includere i dati dell'app. Questo è gestito dal tuo dispositivo, non dall'app.</p>
+  </div>
+
+  <div class="card">
+    <h2>Contatto</h2>
+    <p>Il pulsante di contatto nell'app apre la tua app di posta. Il messaggio viene inviato tramite il tuo provider di posta elettronica.</p>
+  </div>
+
+  <div class="card">
+    <h2>Modifiche</h2>
+    <p>Ci riserviamo il diritto di aggiornare la presente informativa sulla privacy. La versione aggiornata è sempre disponibile a questo URL.</p>
+  </div>
+
+  <div class="card">
+    <h2>Versioni linguistiche</h2>
+    <p>La presente informativa è disponibile in più lingue. In caso di discrepanze tra le versioni linguistiche, prevale la <a href="#en-us">versione inglese (USA)</a>.</p>
+  </div>
+</section>
+
+<!-- NEDERLANDS -->
+<section class="section" data-lang="nl" lang="nl" data-title="Privacybeleid">
+  <div class="card">
+    <div class="badge">Laatst bijgewerkt: november 2026</div>
+    <h2>Verwerkingsverantwoordelijke</h2>
+    <p>Daniel Schmidt, DS Works<br>Straatsburg, Frankrijk<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Welke gegevens we opslaan</h2>
+    <p>Mathifant slaat gegevens uitsluitend op je apparaat op:</p>
+    <ul>
+      <li>Spelersprofielen (naam, avatar, leeftijdsgroep, lievelingskleur)</li>
+      <li>Spelstatistieken (score, nauwkeurigheid, gespeelde sessies)</li>
+      <li>App-instellingen (taal)</li>
+      <li>Aankoopstatus (of Mathifant Pro is ontgrendeld)</li>
+    </ul>
+    <p>Er worden geen persoonsgegevens naar DS Works of andere servers verzonden en er worden geen gegevens met derden gedeeld. De enige uitzondering is de aankoopcontrole door Google of Apple, zie „In-app-aankopen”.</p>
+  </div>
+
+  <div class="card">
+    <h2>In-app-aankopen</h2>
+    <p>Mathifant biedt een eenmalige in-app-aankoop aan („Mathifant Pro”). De betaling verloopt uitsluitend via de Google Play Store of de Apple App Store. DS Works heeft geen toegang tot betalingsgegevens.</p>
+    <p>De aankoop is gekoppeld aan je Google- of Apple-account, niet aan het apparaat. Om te controleren of Mathifant Pro is ontgrendeld, vraagt de app dit op bij Google Play of de App Store. Zo kun je Mathifant Pro na een herinstallatie of op een nieuw apparaat herstellen, zolang je hetzelfde account gebruikt. Voor deze controle geldt het privacybeleid van Google of Apple.</p>
+  </div>
+
+  <div class="card">
+    <h2>Kinderen</h2>
+    <p>Mathifant is bedoeld voor kinderen in de kleuter- en basisschoolleeftijd. De app verzamelt geen persoonsgegevens van kinderen. Er is geen reclame, geen tracking en geen koppeling met sociale netwerken.</p>
+  </div>
+
+  <div class="card">
+    <h2>Toestemmingen</h2>
+    <p>De app heeft geen speciale apparaatrechten nodig — geen toegang tot camera, microfoon, locatie of contacten. Alleen wanneer je een back-up importeert, kan je apparaat om toegang tot je bestanden vragen.</p>
+  </div>
+
+  <div class="card">
+    <h2>Back-up en herstel</h2>
+    <p>Je kunt je voortgang als bestand exporteren, via het deelmenu van je apparaat doorgeven en weer importeren. Dat gebeurt alleen als jij dat wilt. De app zelf verzendt niets. Jij bepaalt waar het bestand naartoe gaat (bijvoorbeeld e-mail of cloudopslag); daar gelden de voorwaarden van de betreffende dienst.</p>
+    <p>Als back-up via Google of iCloud op je apparaat is ingeschakeld, kan het besturingssysteem de appgegevens daarin meenemen. Dat regelt je apparaat, niet de app.</p>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>De contactknop in de app opent je e-mailapp. Het bericht wordt verzonden via je e-mailprovider.</p>
+  </div>
+
+  <div class="card">
+    <h2>Wijzigingen</h2>
+    <p>We behouden ons het recht voor dit privacybeleid bij te werken. De actuele versie is altijd beschikbaar via deze URL.</p>
+  </div>
+
+  <div class="card">
+    <h2>Taalversies</h2>
+    <p>Dit privacybeleid is in meerdere talen beschikbaar. Bij verschillen tussen de taalversies is de <a href="#en-us">Engelse versie (VS)</a> leidend.</p>
+  </div>
+</section>
+
+<!-- POLSKI -->
+<section class="section" data-lang="pl" lang="pl" data-title="Polityka prywatności">
+  <div class="card">
+    <div class="badge">Ostatnia aktualizacja: listopad 2026</div>
+    <h2>Administrator danych</h2>
+    <p>Daniel Schmidt, DS Works<br>Strasburg, Francja<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Jakie dane przechowujemy</h2>
+    <p>Mathifant przechowuje dane wyłącznie na Twoim urządzeniu:</p>
+    <ul>
+      <li>Profile graczy (imię, awatar, grupa wiekowa, ulubiony kolor)</li>
+      <li>Statystyki gry (punkty, dokładność, rozegrane sesje)</li>
+      <li>Ustawienia aplikacji (język)</li>
+      <li>Status zakupu (czy Mathifant Pro jest odblokowany)</li>
+    </ul>
+    <p>Żadne dane osobowe nie są przesyłane do DS Works ani na inne serwery i żadne dane nie są udostępniane osobom trzecim. Jedynym wyjątkiem jest weryfikacja zakupu przez Google lub Apple, opisana w sekcji „Zakupy w aplikacji”.</p>
+  </div>
+
+  <div class="card">
+    <h2>Zakupy w aplikacji</h2>
+    <p>Mathifant oferuje jednorazowy zakup w aplikacji („Mathifant Pro”). Płatności są obsługiwane wyłącznie przez Google Play Store lub Apple App Store. DS Works nie ma dostępu do danych płatniczych.</p>
+    <p>Zakup jest powiązany z Twoim kontem Google lub Apple, a nie z urządzeniem. Aby sprawdzić, czy Mathifant Pro jest odblokowany, aplikacja wysyła zapytanie do Google Play lub App Store. Dzięki temu możesz przywrócić Mathifant Pro po ponownej instalacji lub na nowym urządzeniu, o ile korzystasz z tego samego konta. Do tej weryfikacji zastosowanie ma polityka prywatności Google lub Apple.</p>
+  </div>
+
+  <div class="card">
+    <h2>Dzieci</h2>
+    <p>Mathifant jest przeznaczona dla dzieci w wieku przedszkolnym i wczesnoszkolnym. Aplikacja nie zbiera danych osobowych dzieci. Nie ma reklam, śledzenia ani połączeń z sieciami społecznościowymi.</p>
+  </div>
+
+  <div class="card">
+    <h2>Uprawnienia</h2>
+    <p>Aplikacja nie wymaga specjalnych uprawnień — nie ma dostępu do aparatu, mikrofonu, lokalizacji ani kontaktów. Tylko podczas importu kopii zapasowej Twoje urządzenie może poprosić o dostęp do plików.</p>
+  </div>
+
+  <div class="card">
+    <h2>Kopia zapasowa i przywracanie</h2>
+    <p>Możesz wyeksportować swoje postępy do pliku, przekazać go za pomocą menu udostępniania urządzenia i ponownie zaimportować. Dzieje się to tylko na Twoje życzenie. Sama aplikacja niczego nie przesyła. To Ty decydujesz, gdzie trafi plik (np. e-mail lub chmura); obowiązują tam warunki danej usługi.</p>
+    <p>Jeśli na Twoim urządzeniu włączona jest kopia zapasowa Google lub iCloud, system operacyjny może uwzględnić w niej dane aplikacji. Zależy to od Twojego urządzenia, nie od aplikacji.</p>
+  </div>
+
+  <div class="card">
+    <h2>Kontakt</h2>
+    <p>Przycisk kontaktu w aplikacji otwiera Twoją aplikację pocztową. Wiadomość jest wysyłana przez Twojego dostawcę poczty e-mail.</p>
+  </div>
+
+  <div class="card">
+    <h2>Zmiany</h2>
+    <p>Zastrzegamy sobie prawo do aktualizacji niniejszej polityki prywatności. Aktualna wersja jest zawsze dostępna pod tym adresem URL.</p>
+  </div>
+
+  <div class="card">
+    <h2>Wersje językowe</h2>
+    <p>Niniejsza polityka prywatności jest dostępna w kilku językach. W przypadku rozbieżności między wersjami językowymi rozstrzygająca jest <a href="#en-us">wersja angielska (USA)</a>.</p>
+  </div>
+</section>
+
+<!-- MAGYAR -->
+<section class="section" data-lang="hu" lang="hu" data-title="Adatvédelmi nyilatkozat">
+  <div class="card">
+    <div class="badge">Utolsó frissítés: 2026. november</div>
+    <h2>Adatkezelő</h2>
+    <p>Daniel Schmidt, DS Works<br>Strasbourg, Franciaország<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Milyen adatokat tárolunk</h2>
+    <p>A Mathifant kizárólag a te eszközödön tárol adatokat:</p>
+    <ul>
+      <li>Játékosprofilok (név, avatar, korcsoport, kedvenc szín)</li>
+      <li>Játékstatisztikák (pontszám, pontosság, lejátszott menetek)</li>
+      <li>Alkalmazásbeállítások (nyelv)</li>
+      <li>Vásárlási állapot (fel van-e oldva a Mathifant Pro)</li>
+    </ul>
+    <p>Személyes adatok nem kerülnek sem a DS Workshöz, sem más szerverre, és adatokat nem osztunk meg harmadik felekkel. Az egyetlen kivétel a vásárlás Google vagy Apple általi ellenőrzése, lásd: „Alkalmazáson belüli vásárlások”.</p>
+  </div>
+
+  <div class="card">
+    <h2>Alkalmazáson belüli vásárlások</h2>
+    <p>A Mathifant egyszeri, alkalmazáson belüli vásárlást kínál („Mathifant Pro”). A fizetés lebonyolítása kizárólag a Google Play Áruházon vagy az Apple App Store-on keresztül történik. A DS Works nem fér hozzá a fizetési adatokhoz.</p>
+    <p>A vásárlás a Google- vagy Apple-fiókodhoz kötődik, nem az eszközhöz. Azt, hogy a Mathifant Pro fel van-e oldva, az alkalmazás a Google Playtől vagy az App Store-tól kérdezi le. Így újratelepítés után vagy új eszközön is visszaállíthatod a Mathifant Prót, ha ugyanazt a fiókot használod. Erre a lekérdezésre a Google, illetve az Apple adatvédelmi irányelvei vonatkoznak.</p>
+  </div>
+
+  <div class="card">
+    <h2>Gyermekek</h2>
+    <p>A Mathifant óvodás és általános iskolás korú gyermekeknek készült. Az alkalmazás nem gyűjt személyes adatokat gyermekektől. Nincs benne reklám, követés és közösségimédia-kapcsolat.</p>
+  </div>
+
+  <div class="card">
+    <h2>Engedélyek</h2>
+    <p>Az alkalmazásnak nincs szüksége különleges eszközengedélyekre — nem fér hozzá a kamerához, a mikrofonhoz, a helyadatokhoz vagy a névjegyekhez. Csak biztonsági mentés importálásakor kérhet az eszközöd hozzáférést a fájljaidhoz.</p>
+  </div>
+
+  <div class="card">
+    <h2>Biztonsági mentés és visszaállítás</h2>
+    <p>A haladásodat fájlba exportálhatod, továbbíthatod az eszközöd megosztás menüjén keresztül, majd újra importálhatod. Ez csak a te kérésedre történik. Maga az alkalmazás semmit sem továbbít. Te döntöd el, hová kerül a fájl (például e-mail vagy felhőtárhely); ott az adott szolgáltatás feltételei érvényesek.</p>
+    <p>Ha az eszközödön be van kapcsolva a Google- vagy iCloud-mentés, az operációs rendszer az alkalmazás adatait is mentheti. Ezt az eszközöd szabályozza, nem az alkalmazás.</p>
+  </div>
+
+  <div class="card">
+    <h2>Kapcsolat</h2>
+    <p>Az alkalmazásban lévő kapcsolat gomb megnyitja a levelezőalkalmazásodat. Az üzenetet a levelezési szolgáltatód küldi el.</p>
+  </div>
+
+  <div class="card">
+    <h2>Változások</h2>
+    <p>Fenntartjuk a jogot, hogy ezt az adatvédelmi nyilatkozatot frissítsük. Az aktuális változat mindig elérhető ezen az URL-címen.</p>
+  </div>
+
+  <div class="card">
+    <h2>Nyelvi változatok</h2>
+    <p>Ez az adatvédelmi nyilatkozat több nyelven érhető el. A nyelvi változatok közötti eltérés esetén az <a href="#en-us">angol (amerikai) változat</a> az irányadó.</p>
+  </div>
+</section>
+
+<!-- РУССКИЙ -->
+<section class="section" data-lang="ru" lang="ru" data-title="Политика конфиденциальности">
+  <div class="card">
+    <div class="badge">Последнее обновление: ноябрь 2026 г.</div>
+    <h2>Ответственный за обработку данных</h2>
+    <p>Daniel Schmidt, DS Works<br>Страсбург, Франция<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Какие данные мы храним</h2>
+    <p>Mathifant хранит данные исключительно на вашем устройстве:</p>
+    <ul>
+      <li>Профили игроков (имя, аватар, возрастная группа, любимый цвет)</li>
+      <li>Игровая статистика (очки, точность, сыгранные сессии)</li>
+      <li>Настройки приложения (язык)</li>
+      <li>Статус покупки (разблокирована ли версия Mathifant Pro)</li>
+    </ul>
+    <p>Персональные данные не передаются ни DS Works, ни на какие-либо другие серверы, и никакие данные не передаются третьим лицам. Единственное исключение — проверка покупки со стороны Google или Apple, описанная в разделе «Встроенные покупки».</p>
+  </div>
+
+  <div class="card">
+    <h2>Встроенные покупки</h2>
+    <p>Mathifant предлагает единоразовую встроенную покупку («Mathifant Pro»). Оплата осуществляется исключительно через Google Play Store или Apple App Store. DS Works не имеет доступа к платёжным данным.</p>
+    <p>Покупка привязана к вашему аккаунту Google или Apple, а не к устройству. Чтобы проверить, разблокирована ли версия Mathifant Pro, приложение обращается к Google Play или App Store. Благодаря этому вы можете восстановить Mathifant Pro после переустановки приложения или на новом устройстве, если используете тот же аккаунт. На эту проверку распространяется политика конфиденциальности Google или Apple.</p>
+  </div>
+
+  <div class="card">
+    <h2>Дети</h2>
+    <p>Mathifant предназначено для детей дошкольного и младшего школьного возраста. Приложение не собирает персональные данные детей. В нём нет рекламы, отслеживания и связи с социальными сетями.</p>
+  </div>
+
+  <div class="card">
+    <h2>Разрешения</h2>
+    <p>Приложению не нужны особые разрешения — нет доступа к камере, микрофону, геолокации или контактам. Только при импорте резервной копии ваше устройство может запросить доступ к файлам.</p>
+  </div>
+
+  <div class="card">
+    <h2>Резервное копирование и восстановление</h2>
+    <p>Вы можете экспортировать свой прогресс в файл, передать его через меню «Поделиться» на вашем устройстве и снова импортировать. Это происходит только по вашему желанию. Само приложение ничего не передаёт. Вы сами решаете, куда отправится файл (например, по электронной почте или в облачное хранилище); там действуют условия соответствующего сервиса.</p>
+    <p>Если на вашем устройстве включено резервное копирование через Google или iCloud, операционная система может сохранять в нём данные приложения. Это контролирует ваше устройство, а не приложение.</p>
+  </div>
+
+  <div class="card">
+    <h2>Связь с нами</h2>
+    <p>Кнопка связи в приложении открывает ваше почтовое приложение. Сообщение отправляется через вашего почтового провайдера.</p>
+  </div>
+
+  <div class="card">
+    <h2>Изменения</h2>
+    <p>Мы оставляем за собой право обновлять настоящую политику конфиденциальности. Актуальная версия всегда доступна по этому адресу.</p>
+  </div>
+
+  <div class="card">
+    <h2>Языковые версии</h2>
+    <p>Настоящая политика конфиденциальности доступна на нескольких языках. В случае расхождений между языковыми версиями преимущественную силу имеет <a href="#en-us">английская версия (США)</a>.</p>
+  </div>
+</section>
+
+<!-- УКРАЇНСЬКА -->
+<section class="section" data-lang="uk" lang="uk" data-title="Політика конфіденційності">
+  <div class="card">
+    <div class="badge">Останнє оновлення: листопад 2026 р.</div>
+    <h2>Відповідальний за обробку даних</h2>
+    <p>Daniel Schmidt, DS Works<br>Страсбург, Франція<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Які дані ми зберігаємо</h2>
+    <p>Mathifant зберігає дані виключно на вашому пристрої:</p>
+    <ul>
+      <li>Профілі гравців (імʼя, аватар, вікова група, улюблений колір)</li>
+      <li>Ігрова статистика (бали, точність, зіграні сесії)</li>
+      <li>Налаштування застосунку (мова)</li>
+      <li>Статус покупки (чи розблоковано Mathifant Pro)</li>
+    </ul>
+    <p>Персональні дані не передаються ні DS Works, ні на будь-які інші сервери, і жодні дані не передаються третім особам. Єдиний виняток — перевірка покупки з боку Google або Apple, описана в розділі «Покупки в застосунку».</p>
+  </div>
+
+  <div class="card">
+    <h2>Покупки в застосунку</h2>
+    <p>Mathifant пропонує одноразову покупку в застосунку («Mathifant Pro»). Оплата здійснюється виключно через Google Play Store або Apple App Store. DS Works не має доступу до платіжних даних.</p>
+    <p>Покупка привʼязана до вашого облікового запису Google або Apple, а не до пристрою. Щоб перевірити, чи розблоковано Mathifant Pro, застосунок звертається до Google Play або App Store. Завдяки цьому ви можете відновити Mathifant Pro після перевстановлення або на новому пристрої, якщо використовуєте той самий обліковий запис. На цю перевірку поширюється політика конфіденційності Google або Apple.</p>
+  </div>
+
+  <div class="card">
+    <h2>Діти</h2>
+    <p>Mathifant призначений для дітей дошкільного та молодшого шкільного віку. Застосунок не збирає персональні дані дітей. У ньому немає реклами, відстеження та звʼязку із соціальними мережами.</p>
+  </div>
+
+  <div class="card">
+    <h2>Дозволи</h2>
+    <p>Застосунку не потрібні спеціальні дозволи — немає доступу до камери, мікрофона, геолокації чи контактів. Лише під час імпорту резервної копії ваш пристрій може запитати доступ до файлів.</p>
+  </div>
+
+  <div class="card">
+    <h2>Резервне копіювання та відновлення</h2>
+    <p>Ви можете експортувати свій прогрес у файл, передати його через меню «Поділитися» на вашому пристрої та знову імпортувати. Це відбувається лише на ваше бажання. Сам застосунок нічого не передає. Ви самі вирішуєте, куди потрапить файл (наприклад, електронна пошта чи хмарне сховище); там діють умови відповідного сервісу.</p>
+    <p>Якщо на вашому пристрої увімкнено резервне копіювання через Google або iCloud, операційна система може зберігати там дані застосунку. Це контролює ваш пристрій, а не застосунок.</p>
+  </div>
+
+  <div class="card">
+    <h2>Звʼязок з нами</h2>
+    <p>Кнопка звʼязку в застосунку відкриває вашу поштову програму. Повідомлення надсилається через вашого поштового провайдера.</p>
+  </div>
+
+  <div class="card">
+    <h2>Зміни</h2>
+    <p>Ми залишаємо за собою право оновлювати цю політику конфіденційності. Актуальна версія завжди доступна за цією адресою.</p>
+  </div>
+
+  <div class="card">
+    <h2>Мовні версії</h2>
+    <p>Ця політика конфіденційності доступна кількома мовами. У разі розбіжностей між мовними версіями переважну силу має <a href="#en-us">англійська версія (США)</a>.</p>
+  </div>
+</section>
+
+<!-- PORTUGUÊS (Brasil) -->
+<section class="section" data-lang="pt-br" lang="pt-BR" data-title="Política de Privacidade">
+  <div class="card">
+    <div class="badge">Última atualização: novembro de 2026</div>
+    <h2>Controlador dos dados</h2>
+    <p>Daniel Schmidt, DS Works<br>Estrasburgo, França<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Dados que armazenamos</h2>
+    <p>O Mathifant armazena dados exclusivamente no seu dispositivo:</p>
+    <ul>
+      <li>Perfis de jogador (nome, avatar, faixa etária, cor favorita)</li>
+      <li>Estatísticas de jogo (pontuação, precisão, sessões jogadas)</li>
+      <li>Configurações do app (idioma)</li>
+      <li>Status da compra (se o Mathifant Pro está desbloqueado)</li>
+    </ul>
+    <p>Nenhum dado pessoal é enviado à DS Works ou a qualquer outro servidor, e nenhum dado é compartilhado com terceiros. A única exceção é a verificação da compra pelo Google ou pela Apple, descrita em “Compras no app”.</p>
+  </div>
+
+  <div class="card">
+    <h2>Compras no app</h2>
+    <p>O Mathifant oferece uma compra única no app (“Mathifant Pro”). O pagamento é processado exclusivamente pela Google Play Store ou pela Apple App Store. A DS Works não tem acesso aos dados de pagamento.</p>
+    <p>A compra está vinculada à sua conta Google ou Apple, não ao dispositivo. Para verificar se o Mathifant Pro está desbloqueado, o app consulta o Google Play ou a App Store. Assim, você pode restaurar o Mathifant Pro após reinstalar o app ou em um novo dispositivo, desde que use a mesma conta. Essa verificação está sujeita à política de privacidade do Google ou da Apple.</p>
+  </div>
+
+  <div class="card">
+    <h2>Crianças</h2>
+    <p>O Mathifant é destinado a crianças em idade pré-escolar e do ensino fundamental. O app não coleta dados pessoais de crianças. Não há publicidade, rastreamento nem conexão com redes sociais.</p>
+  </div>
+
+  <div class="card">
+    <h2>Permissões</h2>
+    <p>O app não precisa de permissões especiais do dispositivo — sem acesso à câmera, ao microfone, à localização ou aos contatos. Somente ao importar um backup seu dispositivo pode pedir acesso aos seus arquivos.</p>
+  </div>
+
+  <div class="card">
+    <h2>Backup e restauração</h2>
+    <p>Você pode exportar seu progresso como arquivo, enviá-lo pelo menu de compartilhamento do dispositivo e importá-lo novamente. Isso só acontece quando você quiser. O app em si não transmite nada. Você decide para onde o arquivo vai (por exemplo, e-mail ou armazenamento em nuvem); lá se aplicam os termos do respectivo serviço.</p>
+    <p>Se o backup do Google ou do iCloud estiver ativado no seu dispositivo, o sistema operacional pode incluir os dados do app. Isso é controlado pelo seu dispositivo, não pelo app.</p>
+  </div>
+
+  <div class="card">
+    <h2>Contato</h2>
+    <p>O botão de contato no app abre o seu aplicativo de e-mail. A mensagem é enviada pelo seu provedor de e-mail.</p>
+  </div>
+
+  <div class="card">
+    <h2>Alterações</h2>
+    <p>Reservamo-nos o direito de atualizar esta política de privacidade. A versão atual está sempre disponível neste endereço.</p>
+  </div>
+
+  <div class="card">
+    <h2>Versões em outros idiomas</h2>
+    <p>Esta política de privacidade está disponível em vários idiomas. Em caso de divergência entre as versões, prevalece a <a href="#en-us">versão em inglês (EUA)</a>.</p>
+  </div>
+</section>
+
+<!-- PORTUGUÊS (Portugal) -->
+<section class="section" data-lang="pt-pt" lang="pt-PT" data-title="Política de Privacidade">
+  <div class="card">
+    <div class="badge">Última atualização: novembro de 2026</div>
+    <h2>Responsável pelo tratamento</h2>
+    <p>Daniel Schmidt, DS Works<br>Estrasburgo, França<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Dados que armazenamos</h2>
+    <p>O Mathifant armazena os dados exclusivamente no seu dispositivo:</p>
+    <ul>
+      <li>Perfis de jogador (nome, avatar, faixa etária, cor preferida)</li>
+      <li>Estatísticas de jogo (pontuação, precisão, sessões jogadas)</li>
+      <li>Definições da aplicação (idioma)</li>
+      <li>Estado da compra (se o Mathifant Pro está desbloqueado)</li>
+    </ul>
+    <p>Nenhum dado pessoal é enviado à DS Works nem a qualquer outro servidor, e nenhum dado é partilhado com terceiros. A única exceção é a verificação da compra pela Google ou pela Apple, descrita em «Compras na aplicação».</p>
+  </div>
+
+  <div class="card">
+    <h2>Compras na aplicação</h2>
+    <p>O Mathifant oferece uma compra única na aplicação («Mathifant Pro»). O pagamento é processado exclusivamente pela Google Play Store ou pela Apple App Store. A DS Works não tem acesso aos dados de pagamento.</p>
+    <p>A compra está associada à sua conta Google ou Apple, e não ao dispositivo. Para verificar se o Mathifant Pro está desbloqueado, a aplicação consulta o Google Play ou a App Store. Assim, pode restaurar o Mathifant Pro depois de reinstalar a aplicação ou num novo dispositivo, desde que utilize a mesma conta. Esta verificação está sujeita à política de privacidade da Google ou da Apple.</p>
+  </div>
+
+  <div class="card">
+    <h2>Crianças</h2>
+    <p>O Mathifant destina-se a crianças em idade pré-escolar e do 1.º ciclo do ensino básico. A aplicação não recolhe dados pessoais de crianças. Não há publicidade, rastreio nem ligação a redes sociais.</p>
+  </div>
+
+  <div class="card">
+    <h2>Permissões</h2>
+    <p>A aplicação não necessita de permissões especiais do dispositivo — sem acesso à câmara, ao microfone, à localização ou aos contactos. Apenas quando importa uma cópia de segurança, o seu dispositivo pode pedir acesso aos seus ficheiros.</p>
+  </div>
+
+  <div class="card">
+    <h2>Cópia de segurança e restauro</h2>
+    <p>Pode exportar o seu progresso para um ficheiro, enviá-lo através do menu de partilha do dispositivo e importá-lo novamente. Isto só acontece a seu pedido. A própria aplicação não transmite nada. É o utilizador que decide para onde vai o ficheiro (por exemplo, e-mail ou armazenamento na nuvem); aí aplicam-se as condições do respetivo serviço.</p>
+    <p>Se a cópia de segurança da Google ou do iCloud estiver ativa no seu dispositivo, o sistema operativo pode incluir os dados da aplicação. Isto é controlado pelo seu dispositivo, não pela aplicação.</p>
+  </div>
+
+  <div class="card">
+    <h2>Contacto</h2>
+    <p>O botão de contacto na aplicação abre a sua aplicação de e-mail. A mensagem é enviada através do seu fornecedor de e-mail.</p>
+  </div>
+
+  <div class="card">
+    <h2>Alterações</h2>
+    <p>Reservamo-nos o direito de atualizar esta política de privacidade. A versão atual está sempre disponível neste endereço.</p>
+  </div>
+
+  <div class="card">
+    <h2>Versões linguísticas</h2>
+    <p>Esta política de privacidade está disponível em vários idiomas. Em caso de divergência entre as versões linguísticas, prevalece a <a href="#en-us">versão em inglês (EUA)</a>.</p>
+  </div>
+</section>
+
+<!-- 한국어 -->
+<section class="section" data-lang="ko" lang="ko" data-title="개인정보 처리방침">
+  <div class="card">
+    <div class="badge">최종 업데이트: 2026년 11월</div>
+    <h2>개인정보 처리 책임자</h2>
+    <p>Daniel Schmidt, DS Works<br>프랑스 스트라스부르<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>저장하는 데이터</h2>
+    <p>Mathifant는 모든 데이터를 사용자의 기기에만 저장합니다.</p>
+    <ul>
+      <li>플레이어 프로필(이름, 아바타, 연령대, 좋아하는 색)</li>
+      <li>게임 통계(점수, 정확도, 플레이한 세션)</li>
+      <li>앱 설정(언어)</li>
+      <li>구매 상태(Mathifant Pro 잠금 해제 여부)</li>
+    </ul>
+    <p>개인정보는 DS Works나 그 밖의 어떤 서버로도 전송되지 않으며, 어떤 데이터도 제3자와 공유되지 않습니다. 유일한 예외는 ‘인앱 구매’에 설명된 Google 또는 Apple의 구매 확인입니다.</p>
+  </div>
+
+  <div class="card">
+    <h2>인앱 구매</h2>
+    <p>Mathifant는 1회성 인앱 구매(“Mathifant Pro”)를 제공합니다. 결제는 Google Play 스토어 또는 Apple App Store를 통해서만 처리됩니다. DS Works는 결제 정보에 접근할 수 없습니다.</p>
+    <p>구매 내역은 기기가 아니라 사용자의 Google 또는 Apple 계정에 연결됩니다. 앱은 Mathifant Pro의 잠금 해제 여부를 Google Play 또는 App Store에 확인합니다. 따라서 같은 계정을 사용하면 앱을 다시 설치한 후나 새 기기에서도 Mathifant Pro를 복원할 수 있습니다. 이 확인 과정에는 Google 또는 Apple의 개인정보 처리방침이 적용됩니다.</p>
+  </div>
+
+  <div class="card">
+    <h2>어린이</h2>
+    <p>Mathifant는 미취학 아동과 초등학생을 위해 만들어졌습니다. 앱은 어린이의 개인정보를 수집하지 않습니다. 광고, 추적, 소셜 네트워크 연동이 없습니다.</p>
+  </div>
+
+  <div class="card">
+    <h2>권한</h2>
+    <p>앱은 특별한 기기 권한이 필요하지 않으며 카메라, 마이크, 위치 또는 연락처에 접근하지 않습니다. 백업을 가져올 때에만 기기에서 파일 접근 권한을 요청할 수 있습니다.</p>
+  </div>
+
+  <div class="card">
+    <h2>백업 및 복원</h2>
+    <p>진행 상황을 파일로 내보내고, 기기의 공유 메뉴를 통해 전달한 뒤 다시 가져올 수 있습니다. 이는 사용자가 원할 때에만 이루어집니다. 앱 자체는 아무것도 전송하지 않습니다. 파일을 어디로 보낼지(예: 이메일 또는 클라우드 저장소)는 사용자가 결정하며, 그곳에서는 해당 서비스의 약관이 적용됩니다.</p>
+    <p>기기에서 Google 또는 iCloud 백업이 켜져 있으면 운영체제가 앱 데이터를 함께 백업할 수 있습니다. 이는 앱이 아니라 기기에서 제어합니다.</p>
+  </div>
+
+  <div class="card">
+    <h2>문의</h2>
+    <p>앱의 문의 버튼을 누르면 메일 앱이 열립니다. 메시지는 사용자의 메일 서비스 제공업체를 통해 전송됩니다.</p>
+  </div>
+
+  <div class="card">
+    <h2>변경 사항</h2>
+    <p>당사는 본 개인정보 처리방침을 업데이트할 권리를 보유합니다. 최신 버전은 언제든지 이 URL에서 확인할 수 있습니다.</p>
+  </div>
+
+  <div class="card">
+    <h2>언어별 버전</h2>
+    <p>본 개인정보 처리방침은 여러 언어로 제공됩니다. 언어별 버전 간에 차이가 있을 경우 <a href="#en-us">영어(미국) 버전</a>이 우선합니다.</p>
+  </div>
+</section>
+
+<!-- ČEŠTINA -->
+<section class="section" data-lang="cs" lang="cs" data-title="Zásady ochrany osobních údajů">
+  <div class="card">
+    <div class="badge">Poslední aktualizace: listopad 2026</div>
+    <h2>Správce údajů</h2>
+    <p>Daniel Schmidt, DS Works<br>Štrasburk, Francie<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Jaká data ukládáme</h2>
+    <p>Mathifant ukládá data výhradně ve vašem zařízení:</p>
+    <ul>
+      <li>Profily hráčů (jméno, avatar, věková skupina, oblíbená barva)</li>
+      <li>Herní statistiky (body, přesnost, odehrané hry)</li>
+      <li>Nastavení aplikace (jazyk)</li>
+      <li>Stav nákupu (zda je Mathifant Pro odemčen)</li>
+    </ul>
+    <p>Žádné osobní údaje se neodesílají do DS Works ani na jiné servery a žádná data nejsou sdílena se třetími stranami. Jedinou výjimkou je ověření nákupu ze strany Google nebo Apple, popsané v části „Nákupy v aplikaci“.</p>
+  </div>
+
+  <div class="card">
+    <h2>Nákupy v aplikaci</h2>
+    <p>Mathifant nabízí jednorázový nákup v aplikaci („Mathifant Pro“). Platby zpracovává výhradně Google Play Store nebo Apple App Store. DS Works nemá přístup k platebním údajům.</p>
+    <p>Nákup je vázán na váš účet Google nebo Apple, nikoli na zařízení. Zda je Mathifant Pro odemčen, aplikace ověřuje u Google Play nebo App Store. Díky tomu můžete Mathifant Pro obnovit po přeinstalování aplikace nebo na novém zařízení, pokud používáte stejný účet. Na toto ověření se vztahují zásady ochrany osobních údajů společnosti Google nebo Apple.</p>
+  </div>
+
+  <div class="card">
+    <h2>Děti</h2>
+    <p>Mathifant je určen pro děti předškolního a mladšího školního věku. Aplikace neshromažďuje osobní údaje dětí. Neobsahuje reklamy, sledování ani propojení se sociálními sítěmi.</p>
+  </div>
+
+  <div class="card">
+    <h2>Oprávnění</h2>
+    <p>Aplikace nevyžaduje žádná zvláštní oprávnění — nemá přístup ke kameře, mikrofonu, poloze ani kontaktům. Pouze při importu zálohy může vaše zařízení požádat o přístup k souborům.</p>
+  </div>
+
+  <div class="card">
+    <h2>Zálohování a obnovení</h2>
+    <p>Svůj postup můžete exportovat do souboru, předat ho přes nabídku sdílení ve vašem zařízení a znovu importovat. Děje se tak pouze na vaše přání. Samotná aplikace nic nepřenáší. Kam soubor putuje (např. e-mail nebo cloudové úložiště), rozhodujete vy; platí tam podmínky příslušné služby.</p>
+    <p>Pokud je ve vašem zařízení zapnuté zálohování přes Google nebo iCloud, může operační systém zahrnout i data aplikace. To řídí vaše zařízení, nikoli aplikace.</p>
+  </div>
+
+  <div class="card">
+    <h2>Kontakt</h2>
+    <p>Tlačítko kontaktu v aplikaci otevře vaši e-mailovou aplikaci. Zpráva se odešle prostřednictvím vašeho poskytovatele e-mailu.</p>
+  </div>
+
+  <div class="card">
+    <h2>Změny</h2>
+    <p>Vyhrazujeme si právo tyto zásady ochrany osobních údajů aktualizovat. Aktuální verze je vždy k dispozici na této adrese URL.</p>
+  </div>
+
+  <div class="card">
+    <h2>Jazykové verze</h2>
+    <p>Tyto zásady ochrany osobních údajů jsou k dispozici v několika jazycích. V případě rozporů mezi jazykovými verzemi má přednost <a href="#en-us">anglická verze (USA)</a>.</p>
+  </div>
+</section>
+
+<!-- TÜRKÇE -->
+<section class="section" data-lang="tr" lang="tr" data-title="Gizlilik Politikası">
+  <div class="card">
+    <div class="badge">Son güncelleme: Kasım 2026</div>
+    <h2>Veri sorumlusu</h2>
+    <p>Daniel Schmidt, DS Works<br>Strazburg, Fransa<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Sakladığımız veriler</h2>
+    <p>Mathifant verileri yalnızca cihazınızda saklar:</p>
+    <ul>
+      <li>Oyuncu profilleri (ad, avatar, yaş grubu, en sevilen renk)</li>
+      <li>Oyun istatistikleri (puan, doğruluk, oynanan oturumlar)</li>
+      <li>Uygulama ayarları (dil)</li>
+      <li>Satın alma durumu (Mathifant Pro'nun kilidinin açık olup olmadığı)</li>
+    </ul>
+    <p>Hiçbir kişisel veri DS Works'e veya başka bir sunucuya gönderilmez ve hiçbir veri üçüncü taraflarla paylaşılmaz. Tek istisna, “Uygulama içi satın alımlar” bölümünde açıklanan, Google veya Apple tarafından yapılan satın alma doğrulamasıdır.</p>
+  </div>
+
+  <div class="card">
+    <h2>Uygulama içi satın alımlar</h2>
+    <p>Mathifant tek seferlik bir uygulama içi satın alım (“Mathifant Pro”) sunar. Ödeme işlemleri yalnızca Google Play Store veya Apple App Store üzerinden gerçekleştirilir. DS Works'ün ödeme bilgilerine erişimi yoktur.</p>
+    <p>Satın alma, cihaza değil Google veya Apple hesabınıza bağlıdır. Uygulama, Mathifant Pro'nun kilidinin açık olup olmadığını Google Play veya App Store'a sorar. Böylece aynı hesabı kullandığınız sürece uygulamayı yeniden yükledikten sonra veya yeni bir cihazda Mathifant Pro'yu geri yükleyebilirsiniz. Bu doğrulama için Google'ın veya Apple'ın gizlilik politikası geçerlidir.</p>
+  </div>
+
+  <div class="card">
+    <h2>Çocuklar</h2>
+    <p>Mathifant okul öncesi ve ilkokul çağındaki çocuklar için tasarlanmıştır. Uygulama çocuklardan kişisel veri toplamaz. Reklam, izleme ve sosyal ağ bağlantısı yoktur.</p>
+  </div>
+
+  <div class="card">
+    <h2>İzinler</h2>
+    <p>Uygulama özel cihaz izinleri gerektirmez — kamera, mikrofon, konum veya kişilere erişmez. Yalnızca bir yedeği içe aktardığınızda cihazınız dosyalarınıza erişim izni isteyebilir.</p>
+  </div>
+
+  <div class="card">
+    <h2>Yedekleme ve geri yükleme</h2>
+    <p>İlerlemenizi bir dosya olarak dışa aktarabilir, cihazınızın paylaşım menüsü üzerinden iletebilir ve yeniden içe aktarabilirsiniz. Bu yalnızca sizin isteğinizle gerçekleşir. Uygulamanın kendisi hiçbir şey aktarmaz. Dosyanın nereye gideceğine (örneğin e-posta veya bulut depolama) siz karar verirsiniz; orada ilgili hizmetin koşulları geçerlidir.</p>
+    <p>Cihazınızda Google veya iCloud yedeklemesi etkinse, işletim sistemi uygulama verilerini de yedekleyebilir. Bunu uygulama değil, cihazınız kontrol eder.</p>
+  </div>
+
+  <div class="card">
+    <h2>İletişim</h2>
+    <p>Uygulamadaki iletişim düğmesi e-posta uygulamanızı açar. Mesaj, e-posta sağlayıcınız üzerinden gönderilir.</p>
+  </div>
+
+  <div class="card">
+    <h2>Değişiklikler</h2>
+    <p>Bu gizlilik politikasını güncelleme hakkımızı saklı tutarız. Güncel sürüme her zaman bu URL'den ulaşılabilir.</p>
+  </div>
+
+  <div class="card">
+    <h2>Dil sürümleri</h2>
+    <p>Bu gizlilik politikası birden fazla dilde sunulmaktadır. Dil sürümleri arasında farklılık olması hâlinde <a href="#en-us">İngilizce (ABD) sürüm</a> esas alınır.</p>
+  </div>
+</section>
+
+<!-- TIẾNG VIỆT -->
+<section class="section" data-lang="vi" lang="vi" data-title="Chính sách quyền riêng tư">
+  <div class="card">
+    <div class="badge">Cập nhật lần cuối: tháng 11 năm 2026</div>
+    <h2>Bên chịu trách nhiệm xử lý dữ liệu</h2>
+    <p>Daniel Schmidt, DS Works<br>Strasbourg, Pháp<br>
+    <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Dữ liệu chúng tôi lưu trữ</h2>
+    <p>Mathifant chỉ lưu trữ dữ liệu trên thiết bị của bạn:</p>
+    <ul>
+      <li>Hồ sơ người chơi (tên, ảnh đại diện, nhóm tuổi, màu yêu thích)</li>
+      <li>Thống kê trò chơi (điểm số, độ chính xác, số lượt chơi)</li>
+      <li>Cài đặt ứng dụng (ngôn ngữ)</li>
+      <li>Trạng thái mua hàng (Mathifant Pro đã được mở khóa hay chưa)</li>
+    </ul>
+    <p>Không có dữ liệu cá nhân nào được gửi đến DS Works hay bất kỳ máy chủ nào khác, và không có dữ liệu nào được chia sẻ với bên thứ ba. Ngoại lệ duy nhất là việc Google hoặc Apple xác minh giao dịch mua, được mô tả trong mục “Mua hàng trong ứng dụng”.</p>
+  </div>
+
+  <div class="card">
+    <h2>Mua hàng trong ứng dụng</h2>
+    <p>Mathifant cung cấp một gói mua một lần trong ứng dụng (“Mathifant Pro”). Việc thanh toán được xử lý hoàn toàn qua Google Play Store hoặc Apple App Store. DS Works không có quyền truy cập vào dữ liệu thanh toán.</p>
+    <p>Giao dịch mua được liên kết với tài khoản Google hoặc Apple của bạn, không phải với thiết bị. Để kiểm tra Mathifant Pro đã được mở khóa hay chưa, ứng dụng sẽ hỏi Google Play hoặc App Store. Nhờ đó, bạn có thể khôi phục Mathifant Pro sau khi cài đặt lại ứng dụng hoặc trên thiết bị mới, miễn là bạn dùng cùng một tài khoản. Việc kiểm tra này tuân theo chính sách quyền riêng tư của Google hoặc Apple.</p>
+  </div>
+
+  <div class="card">
+    <h2>Trẻ em</h2>
+    <p>Mathifant được thiết kế cho trẻ em ở độ tuổi mầm non và tiểu học. Ứng dụng không thu thập dữ liệu cá nhân của trẻ em. Không có quảng cáo, không theo dõi và không kết nối với mạng xã hội.</p>
+  </div>
+
+  <div class="card">
+    <h2>Quyền truy cập</h2>
+    <p>Ứng dụng không yêu cầu quyền đặc biệt nào trên thiết bị — không truy cập máy ảnh, micrô, vị trí hay danh bạ. Chỉ khi bạn nhập bản sao lưu, thiết bị mới có thể yêu cầu quyền truy cập tệp của bạn.</p>
+  </div>
+
+  <div class="card">
+    <h2>Sao lưu và khôi phục</h2>
+    <p>Bạn có thể xuất tiến trình của mình thành tệp, chuyển tệp qua menu chia sẻ của thiết bị và nhập lại. Việc này chỉ diễn ra khi bạn muốn. Bản thân ứng dụng không truyền bất cứ thứ gì. Bạn quyết định tệp được gửi đến đâu (ví dụ email hoặc lưu trữ đám mây); tại đó, điều khoản của dịch vụ tương ứng sẽ được áp dụng.</p>
+    <p>Nếu tính năng sao lưu qua Google hoặc iCloud được bật trên thiết bị, hệ điều hành có thể sao lưu cả dữ liệu của ứng dụng. Điều này do thiết bị của bạn kiểm soát, không phải ứng dụng.</p>
+  </div>
+
+  <div class="card">
+    <h2>Liên hệ</h2>
+    <p>Nút liên hệ trong ứng dụng sẽ mở ứng dụng email của bạn. Tin nhắn được gửi qua nhà cung cấp dịch vụ email của bạn.</p>
+  </div>
+
+  <div class="card">
+    <h2>Thay đổi</h2>
+    <p>Chúng tôi có quyền cập nhật chính sách quyền riêng tư này. Phiên bản hiện hành luôn có tại URL này.</p>
+  </div>
+
+  <div class="card">
+    <h2>Phiên bản ngôn ngữ</h2>
+    <p>Chính sách quyền riêng tư này có sẵn bằng nhiều ngôn ngữ. Nếu có sự khác biệt giữa các phiên bản ngôn ngữ, <a href="#en-us">phiên bản tiếng Anh (Hoa Kỳ)</a> sẽ được ưu tiên áp dụng.</p>
+  </div>
+</section>
+
+</main>
 
 <footer>
   <p>© 2026 DS Works · <a href="mailto:support@dsworks.app">support@dsworks.app</a></p>
 </footer>
 
 <script>
-  function switchLang(lang, btn) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(b => b.classList.remove('active'));
-    document.getElementById(lang).classList.add('active');
-    btn.classList.add('active');
-  }
+  (function () {
+    var DEFAULT_LANG = 'en-us';
+    // Regional variants without their own section, mapped to the closest one.
+    // Anything else falls back to the first section with the same base language
+    // (en-* -> en-us, pt-* -> pt-br), then to English (US).
+    var REGION_FALLBACK = {
+      'en-au': 'en-gb', 'en-nz': 'en-gb', 'en-ie': 'en-gb', 'en-za': 'en-gb', 'en-in': 'en-gb',
+      'pt-ao': 'pt-pt', 'pt-mz': 'pt-pt', 'pt-cv': 'pt-pt', 'pt-gw': 'pt-pt', 'pt-st': 'pt-pt', 'pt-tl': 'pt-pt'
+    };
+    var sections = document.querySelectorAll('.section');
+    var tabs = document.querySelectorAll('.lang-tab');
+    var subtitle = document.getElementById('subtitle');
+    var codes = Array.prototype.map.call(sections, function (s) { return s.dataset.lang; });
+
+    function resolve(code) {
+      if (!code) return null;
+      code = code.toLowerCase().replace(/_/g, '-');
+      if (codes.indexOf(code) !== -1) return code;
+      if (REGION_FALLBACK[code]) return REGION_FALLBACK[code];
+      var base = code.split('-')[0];
+      for (var i = 0; i < codes.length; i++) {
+        if (codes[i].split('-')[0] === base) return codes[i];
+      }
+      return null;
+    }
+
+    // Priority: ?lang=xx  >  #xx  >  browser language  >  English (US)
+    function initialLang() {
+      var candidates = [
+        new URLSearchParams(location.search).get('lang'),
+        location.hash.slice(1)
+      ].concat(navigator.languages || [navigator.language]);
+      for (var i = 0; i < candidates.length; i++) {
+        var c = resolve(candidates[i]);
+        if (c) return c;
+      }
+      return DEFAULT_LANG;
+    }
+
+    function show(code, updateUrl) {
+      var active = null;
+      sections.forEach(function (s) {
+        var on = s.dataset.lang === code;
+        s.classList.toggle('active', on);
+        if (on) active = s;
+      });
+      tabs.forEach(function (t) {
+        var on = t.dataset.lang === code;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      document.documentElement.lang = active.lang;
+      subtitle.textContent = active.dataset.title;
+      subtitle.lang = active.lang;
+      document.title = active.dataset.title + ' – Mathifant';
+      if (updateUrl && history.replaceState) {
+        history.replaceState(null, '', location.pathname + '#' + code);
+      }
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { show(t.dataset.lang, true); });
+    });
+
+    // Also handles the "English (US) version" links in the language-versions card.
+    window.addEventListener('hashchange', function () {
+      var c = resolve(location.hash.slice(1));
+      if (c) {
+        show(c, false);
+        window.scrollTo(0, 0);
+      }
+    });
+
+    show(initialLang(), false);
+  })();
 </script>
 
 </body>
